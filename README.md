@@ -5,6 +5,7 @@ Minimal development container template for Python projects with environment vari
 ## What's Included
 - Python 3.11 container (Ubuntu-based)
 - Claude Code CLI pre-installed
+- Claude Flow (AI swarm orchestration) pre-configured
 - Environment variables via `.env` file
 - `main.py` starter file
 - Clean, minimal setup
@@ -40,13 +41,17 @@ devpod up . --ide vscode
 python main.py
 ```
 
-### 5. Use Claude Code
+### 5. Use Claude Code & Claude Flow
 ```bash
 # Chat with Claude (uses API key from .env)
 claude chat "Help me with Python code"
 
 # Use Claude on files
 claude edit main.py
+
+# Use Claude Flow for advanced orchestration
+npx claude-flow@alpha sparc modes
+npx claude-flow@alpha swarm init
 ```
 
 ## Adding Dependencies
